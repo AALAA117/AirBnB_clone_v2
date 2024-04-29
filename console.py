@@ -126,14 +126,12 @@ class HBNBCommand(cmd.Cmd):
         class_name = param[0]
         new_instance = HBNBCommand.classes[class_name]()
         list_atrr = {}
-        print(len(param))
         for i in range(1, len(param)):
             item = param[i].split("=")
             if isinstance(item[1], str):
                 if ' ' in item[1]:
                     item[1].replace(' ', '_')
             list_atrr[item[0]] = item[1]
-        print(type(eval(str(list_atrr))))
         self.do_update(" ".join([class_name, new_instance.id, str(list_atrr)]))
         storage.save()
         print(new_instance.id)
@@ -219,11 +217,11 @@ class HBNBCommand(cmd.Cmd):
             if args not in HBNBCommand.classes:
                 print("** class doesn't exist **")
                 return
-            for k, v in storage._FileStorage__objects.items():
+            for k, v in storage.all():
                 if k.split('.')[0] == args:
                     print_list.append(str(v))
         else:
-            for k, v in storage._FileStorage__objects.items():
+            for k, v in storage.all():
                 print_list.append(str(v))
 
         print(print_list)
