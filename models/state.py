@@ -10,12 +10,11 @@ storage_var = getenv("HBNB_TYPE_STORAGE")
 
 class State(BaseModel, Base):
     """ State class """
-    if storage_var == "db":
-        __tablename__ = "states"
-        name = Column(String(128), nullable=False)
-        cities = relationship("City", cascade="all, delete-orphan",
-                              backref="state")
-    else:
+    __tablename__ = "states"
+    name = Column(String(128), nullable=False)
+    cities = relationship("City", cascade="all, delete-orphan",
+                          backref="state")
+    if storage_var != "db":
         @property
         def cities(self):
             """
