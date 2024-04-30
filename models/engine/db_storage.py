@@ -2,6 +2,7 @@
 from models.base_model import BaseModel, Base
 from models.city import City
 from models.state import State
+from models.user import User
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
