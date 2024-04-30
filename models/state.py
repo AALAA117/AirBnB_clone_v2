@@ -23,7 +23,7 @@ class State(BaseModel, Base):
             """
             from models import storage
             cities_list = []
-            for obj in storage.all(City).values:
-                if self.id == city.state_id:
+            for obj_city in storage.all(City).values:
+                if self.id == obj_city.state_id:
                     cities_list.append(obj)
             return (cities_list)
