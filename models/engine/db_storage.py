@@ -3,6 +3,7 @@ from models.base_model import BaseModel, Base
 from models.city import City
 from models.state import State
 from models.user import User
+from models.place import Place
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
@@ -20,7 +21,7 @@ class DBStorage:
     __engine = None
     __session = None
     class_s = {
-            "State": State, "City": City, "User": User
+            "State": State, "City": City, "User": User, "Place": Place
             }
 
     def __init__(self):
