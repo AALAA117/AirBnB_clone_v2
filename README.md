@@ -141,3 +141,6 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 ```
 <br>
 <h3>SQL Scripts</h3>
+<ul>
+  <li>Allowed editors: vi, vim, emacs</li>
+</ul>
