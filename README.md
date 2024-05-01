@@ -148,6 +148,8 @@ Usage: <class_name>.update(<_id>, <dictionary>)
   <li>All your SQL queries should have a comment just before (i.e. syntax above)</li>
   <li>All your files should start by a comment describing the task</li>
   <li>All SQL keywords should be in uppercase (SELECT, WHERE…)</li>
+  <li>A README.md file, at the root of the folder of the project, is mandatory</li>
+
 
 
   
