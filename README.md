@@ -149,6 +149,7 @@ Usage: <class_name>.update(<_id>, <dictionary>)
   <li>All your files should start by a comment describing the task</li>
   <li>All SQL keywords should be in uppercase (SELECT, WHERE…)</li>
   <li>A README.md file, at the root of the folder of the project, is mandatory</li>
+  <li>The length of your files will be tested using wc</li>
 
 
 
