@@ -145,4 +145,6 @@ Usage: <class_name>.update(<_id>, <dictionary>)
   <li>Allowed editors: vi, vim, emacs</li>
   <li>All your files will be executed on Ubuntu 20.04 LTS using MySQL 8.0</li>
   <li>All your files should end with a new line</li>
+  <li>All your SQL queries should have a comment just before (i.e. syntax above)</li>
+  
 </ul>
