@@ -48,3 +48,13 @@ def do_deploy(archive_path):
     run('ln -s /data/web_static/releases/{}/ /data/web_static/current'
         .format(folder_name))
     return True
+
+
+def deploy():
+    """
+    Creates and distributes an archive to the web servers.
+    """
+    archive_path = do_pack()
+    if not archive_path:
+        return False
+    return do_deploy(archive_path)
